@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <title>resturant website</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- ---------------------------------- MAIN: left right----------------------------------->
+    <div class="main-container">
+      <div class="main-left">
+        <!-- <img src="imgs/logo1.jpg" alt="" id="logo" /> -->
+      </div>
+
+      <div class="main-right">
+        <div class="topline">
+          <p id="logo-slogan">Where Flavor Meets Passion</p>
+        </div>
+
+        <div class="topbar">
+          <nav class="topbar-middle">
+            <ul>
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="menu.html">MENU</a></li>
+              <li><a href="gallery.html">GALLERY</a></li>
+              <li><a href="blog.html">BLOG</a></li>
+              <li><a href="about.html">ABOUT</a></li>
+              <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+          </nav>
+
+          <!-- login,register,search -->
+          <div class="topbar-right">
+            <button class="top-btn">Login</button>
+            <button class="top-btn">Register</button>
+            <!-- icon search -->
+            <!-- <i class="fa-solid fa-magnifying-glass search"></i> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- --------------------------------------- MIDDLE-------------------------------------------->
+    <div class="middleTop">
+      <div class="middleTop-text">
+        <h2 style="font-size: 50px">Meals for Every Mood</h2>
+        <h3 style="font-size: 30px">
+          Discover flavors that perfectly complement each moment of your day.
+        </h3>
+        <p id="p-middle">
+          From hearty breakfasts to energize your mornings, delightful lunches
+          to fuel your afternoons, indulgent desserts to satisfy your sweet
+          cravings, and savory dinners to wind down your evenings, we craft
+          meals that turn every meal into an unforgettable experience. Explore
+          our menu and let your taste buds embark on a journey through our
+          expertly curated dishes, made with love and the freshest ingredients.
+        </p>
+        <button>ORDER NOW</button>
+      </div>
+
+      <!-- <div class="middleTop-Img">
+
+      </div> -->
+    </div>
+
+    <p id="title-short-menu">A Taste for Every Part of the Day</p>
+
+    <div class="short-menu">
+      <div class="menu-type">
+        <img src="imgs/breakfast.jpg" alt="" />
+        <p>Breakfast</p>
+      </div>
+      <div class="menu-type">
+        <img src="imgs/lunch.jpg" alt="" />
+        <p>Lunch</p>
+      </div>
+      <div class="menu-type">
+        <img src="imgs/dinner.jpg" alt="" />
+        <p>Dinner</p>
+      </div>
+      <div class="menu-type">
+        <img src="imgs/desserts.jpg" alt="" />
+        <p>Desserts</p>
+      </div>
+    </div>
+
+    <div class="ourstory">
+      <div class="ourstory-top"></div>
+
+      <div class="outstory-contect">
+        <div class="outstory-contect-left"></div>
+        <div class="outstory-contect-right"></div>
+      </div>
+    </div>
+
+    <!-- only 3 items row -->
+    <div class="outblog"></div>
+
+    <div id="reserve-title">
+      <p><span style="color: white">Book Your</span> Table Now!</p>
+    </div>
+
+    <div class="reservation-container">
+      <div class="reservation-card">
+        <!-- Reservation Form -->
+        <form action="#" method="POST">
+          <!-- Top Section: Date, Hour, Full Name -->
+          <div class="top-section">
+            <label for="day">Select Day:</label>
+            <input type="date" id="day" name="day" required />
+
+            <label for="hour">Select Hour:</label>
+            <select id="hour" name="hour" required>
+              <option value="">Choose Hour</option>
+              <option value="10:00">10:00</option>
+              <option value="11:00">11:00</option>
+              <option value="12:00">12:00</option>
+              <option value="15:00">15:00</option>
+              <option value="16:00">16:00</option>
+              <option value="17:00">17:00</option>
+              <option value="18:00">18:00</option>
+              <option value="19:00">19:00</option>
+              <option value="20:00">20:00</option>
+              <option value="21:00">21:00</option>
+            </select>
+
+            <label for="full-name">Full Name:</label>
+            <input
+              type="text"
+              id="full-name"
+              name="full-name"
+              placeholder="Your Full Name"
+              required
+            />
+          </div>
+
+          <!-- Bottom Section: Phone, Persons, Button -->
+          <div class="bottom-section">
+            <label for="phone">Phone Number:</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Your Phone Number"
+              required
+            />
+
+            <label for="persons">Number of Persons:</label>
+            <input
+              type="number"
+              id="persons"
+              name="persons"
+              min="1"
+              max="20"
+              placeholder="How Many?"
+              required
+            />
+
+            <button type="submit" class="">Book a Table</button>
+          </div>
+        </form>
+      </div>
+      <div class="reservation-right">
+        <img src="imgs/desserts.jpg" alt="" />
+      </div>
+    </div>
+
+    <section class="app">
+      <p>Download the app to your phone today!</p>
+      <button class="app-btn">DOWNLOAD NOW</button>
+    </section>
+    <div class="bottom-container">
+      <!-- Reservations Section -->
+      <div class="section">
+        <h3>Reservations</h3>
+        <p>Please call <strong>(887) 654-3210</strong>.</p>
+      </div>
+
+      <!-- Address Section -->
+      <div class="section">
+        <h3>Address</h3>
+        <p>4321 Israel St,</p>
+        <p>Haifa, PR 12345</p>
+      </div>
+
+      <!-- Opening Hours Section -->
+      <div class="section">
+        <h3>Opening Hours</h3>
+        <p>Fri-Sat: 5:00 PM - 11:00 PM</p>
+        <p>Sun-Thurs: 11:00 AM - 11:00 PM</p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <!-- Left side: Text and Reserved -->
+      <div class="footer-left">
+        <p>&copy; 2025 Restaurant Name. All rights reserved.</p>
+      </div>
+
+      <!-- Right side: Social Media Icons -->
+      <div class="footer-right">
+        <i class="fab fa-facebook facebook"></i>
+        <i class="fab fa-instagram instagram"></i>
+        <i class="fab fa-twitter twitter"></i>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

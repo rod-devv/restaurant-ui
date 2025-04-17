@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Article</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+
+      header {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      .article-container {
+        max-width: 800px;
+        margin: 40px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .article-container img {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+        border-radius: 8px;
+      }
+
+      .article-content {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Article</h1>
+    </header>
+
+    <section class="article-container">
+      <div class="article-content">
+        <h2 id="article-title"></h2>
+        <img id="article-image" src="" alt="Dish Image" />
+        <p id="article-description"></p>
+      </div>
+    </section>
+
+    <script>
+      // Get the index and image URL from the URL parameters
+      const urlParams = new URLSearchParams(window.location.search);
+      const index = urlParams.get("index");
+      const imageSrc = urlParams.get("image");
+
+      // Define articles based on the index
+      const articles = [
+        {
+          title: "Delicious Breakfast",
+          content:
+            "Loremipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere  ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere animi pariatur dolor! Facilis perferendis quo exercitationem ad praesentium sint iusto quidem dicta cum, labore voluptate, officia architecto?",
+        },
+        {
+          title: "Lunch Special",
+          content:
+            "Loremipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere  ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere animi pariatur dolor! Facilis perferendis quo exercitationem ad praesentium sint iusto quidem dicta cum, labore voluptate, officia architecto?",
+        },
+        {
+          title: "Refreshing Drinks",
+          content:
+            "Loremipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere  ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere animi pariatur dolor! Facilis perferendis quo exercitationem ad praesentium sint iusto quidem dicta cum, labore voluptate, officia architecto?",
+        },
+        {
+          title: "Exclusive Dinners",
+          content:
+            "Loremipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere  ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere animi pariatur dolor! Facilis perferendis quo exercitationem ad praesentium sint iusto quidem dicta cum, labore voluptate, officia architecto?",
+        },
+        {
+          title: "Vegetarian Delights",
+          content:
+            "Loremipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere  ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere animi pariatur dolor! Facilis perferendis quo exercitationem ad praesentium sint iusto quidem dicta cum, labore voluptate, officia architecto?",
+        },
+        {
+          title: "Perfect Desserts",
+          content:
+            "Loremipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere  ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere animi pariatur dolor! Facilis perferendis quo exercitationem ad praesentium sint iusto quidem dicta cum, labore voluptate, officia architecto?",
+        },
+        {
+          title: "Fresh Seafood",
+          content:
+            "Loremipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere  ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere animi pariatur dolor! Facilis perferendis quo exercitationem ad praesentium sint iusto quidem dicta cum, labore voluptate, officia architecto?",
+        },
+        {
+          title: "Family Meals",
+          content:
+            "Loremipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere  ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere animi pariatur dolor! Facilis perferendis quo exercitationem ad praesentium sint iusto quidem dicta cum, labore voluptate, officia architecto?",
+        },
+        {
+          title: "Seasonal Menus",
+          content:
+            "Loremipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere  ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere ipsum, dolor sit amet consectetur adipisicing elit. Ullam, consequuntur modi facere animi pariatur dolor! Facilis perferendis quo exercitationem ad praesentium sint iusto quidem dicta cum, labore voluptate, officia architecto?",
+        },
+      ];
+
+      // Load the appropriate article based on the index
+      const article = articles[index - 1];
+
+      // Display article title, description, and image
+      document.getElementById("article-title").innerText = article.title;
+      document.getElementById("article-description").innerText =
+        article.content;
+      document.getElementById("article-image").src = imageSrc;
+    </script>
+  </body>
+</html>

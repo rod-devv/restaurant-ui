@@ -1,0 +1,35 @@
+/* Title styling */
+.about-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin: 30px 0;
+}
+
+/* Container styling */
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 10px;
+  overflow: hidden;
+}
+
+/* Left side styling */
+.about-text {
+  flex: 1;
+  padding: 20px;
+  line-height: 1.8;
+  font-size: 18px;
+}
+
+/* Right side styling */
+.about-image {
+  flex: 1;
+  background: url("imgs/lunch.jpg") no-repeat;
+
+  height: 400px;
+}

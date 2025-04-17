@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant Reservation</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Container for the background image */
+      .reservation-container {
+        /* position: relative; */
+        width: 100%;
+        height: 100vh; /* Full height of the viewport */
+        background: rgb(240, 196, 0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .reservation-right {
+        flex: 1;
+      }
+
+      .reservation-right img {
+        height: 400px;
+        width: 100%;
+        object-fit: cover;
+      }
+      /* Card for the reservation form */
+      .reservation-card {
+        flex: 1;
+        background-color: rgb(240, 196, 0);
+        padding: 30px;
+        max-width: 300px;
+
+        display: flex;
+        flex-direction: column;
+      }
+
+      .reservation-card h2 {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .reservation-card input,
+      .reservation-card select {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+      }
+
+      .top-section {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+      }
+
+      .bottom-section {
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* Style for the button */
+      .reservation-card button {
+        padding: 10px 20px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      .reservation-card button:hover {
+        background-color: #218838;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Reservation Container with Image Background -->
+
+    <div class="container-card">
+      <h2>Book a Table</h2>
+
+      <div class="reservation-container">
+        <div class="reservation-card">
+          <!-- Reservation Form -->
+          <form action="#" method="POST">
+            <!-- Top Section: Date, Hour, Full Name -->
+            <div class="top-section">
+              <label for="day">Select Day:</label>
+              <input type="date" id="day" name="day" required />
+
+              <label for="hour">Select Hour:</label>
+              <select id="hour" name="hour" required>
+                <option value="">Choose Hour</option>
+                <option value="10:00">21:00</option>
+                <option value="11:00">21:00</option>
+                <option value="12:00">21:00</option>
+                <option value="15:00">21:00</option>
+                <option value="16:00">21:00</option>
+                <option value="17:00">21:00</option>
+                <option value="18:00">18:00</option>
+                <option value="19:00">19:00</option>
+                <option value="20:00">20:00</option>
+                <option value="21:00">21:00</option>
+              </select>
+
+              <label for="full-name">Full Name:</label>
+              <input
+                type="text"
+                id="full-name"
+                name="full-name"
+                placeholder="Your Full Name"
+                required
+              />
+            </div>
+
+            <!-- Bottom Section: Phone, Persons, Button -->
+            <div class="bottom-section">
+              <label for="phone">Phone Number:</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Your Phone Number"
+                required
+              />
+
+              <label for="persons">Number of Persons:</label>
+              <input
+                type="number"
+                id="persons"
+                name="persons"
+                min="1"
+                max="20"
+                placeholder="How Many?"
+                required
+              />
+
+              <button type="submit">Book a Table</button>
+            </div>
+          </form>
+        </div>
+        <div class="reservation-right">
+          <img src="imgs/desserts.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

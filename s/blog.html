@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant Blog</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      .blog-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 20px;
+      }
+
+      .blog-item {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: center;
+      }
+
+      .blog-item img {
+        width: 100%;
+        height: auto;
+      }
+
+      .read-more {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 8px 16px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+
+      .read-more:hover {
+        background-color: #0056b3;
+      }
+
+      header {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Restaurant Blog</h1>
+    </header>
+
+    <section class="blog-container">
+      <!-- Blog Grid -->
+      <div class="blog-item">
+        <img src="blogimgs/1.jpg" alt="Dish 1" />
+        <h2>Delicious Breakfast</h2>
+        <p>
+          Start your day with a hearty breakfast. Fresh ingredients and full of
+          flavor!
+        </p>
+        <a href="article.html?index=1&image=blogimgs/1.jpg" class="read-more"
+          >Read More</a
+        >
+      </div>
+      <div class="blog-item">
+        <img src="blogimgs/2.jpg" alt="Dish 2" />
+        <h2>Lunch Special</h2>
+        <p>
+          Our lunch special will fill you up with a nutritious and tasty meal.
+        </p>
+        <a href="article.html?index=2&image=blogimgs/2.jpg" class="read-more"
+          >Read More</a
+        >
+      </div>
+      <div class="blog-item">
+        <img src="blogimgs/3.jpg" alt="Dish 3" />
+        <h2>Refreshing Drinks</h2>
+        <p>Cool down with our selection of fresh and vibrant drinks.</p>
+        <a href="article.html?index=3&image=blogimgs/3.jpg" class="read-more"
+          >Read More</a
+        >
+      </div>
+      <div class="blog-item">
+        <img src="blogimgs/4.jpg" alt="Dish 4" />
+        <h2>Exclusive Dinners</h2>
+        <p>Enjoy a fine dining experience with our exclusive dinner menus.</p>
+        <a href="article.html?index=4&image=blogimgs/4.jpg" class="read-more"
+          >Read More</a
+        >
+      </div>
+      <div class="blog-item">
+        <img src="blogimgs/5.jpg" alt="Dish 5" />
+        <h2>Vegetarian Delights</h2>
+        <p>
+          Healthy and delicious vegetarian meals that satisfy every appetite.
+        </p>
+        <a href="article.html?index=5&image=blogimgs/5.jpg" class="read-more"
+          >Read More</a
+        >
+      </div>
+      <div class="blog-item">
+        <img src="blogimgs/6.jpg" alt="Dish 6" />
+        <h2>Perfect Desserts</h2>
+        <p>Satisfy your sweet tooth with our irresistible desserts.</p>
+        <a href="article.html?index=6&image=blogimgs/6.jpg" class="read-more"
+          >Read More</a
+        >
+      </div>
+      <div class="blog-item">
+        <img src="blogimgs/7.jpg" alt="Dish 7" />
+        <h2>Fresh Seafood</h2>
+        <p>Experience the freshest seafood dishes with every bite.</p>
+        <a href="article.html?index=7&image=blogimgs/7.jpg" class="read-more"
+          >Read More</a
+        >
+      </div>
+      <div class="blog-item">
+        <img src="blogimgs/8.jpg" alt="Dish 8" />
+        <h2>Family Meals</h2>
+        <p>
+          Perfectly crafted family meals for every occasion. Share the love!
+        </p>
+        <a href="article.html?index=8&image=blogimgs/8.jpg" class="read-more"
+          >Read More</a
+        >
+      </div>
+      <div class="blog-item">
+        <img src="blogimgs/9.jpg" alt="Dish 9" />
+        <h2>Seasonal Menus</h2>
+        <p>Our seasonal menus bring the freshest ingredients of the time.</p>
+        <a href="article.html?index=9&image=blogimgs/9.jpg" class="read-more"
+          >Read More</a
+        >
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
